@@ -1,3 +1,7 @@
+
+# MyPortfolio
+This portfolio showcases my skills, projects, and contact information with a modern, responsive design using React, Tailwind CSS, and Framer Motion for smooth animations. The site features sections like Skills, Projects, and Footer with stylish icons and dark mode support.
+
 <<<<<<< HEAD
 # React + Vite
 
