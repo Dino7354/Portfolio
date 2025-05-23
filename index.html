@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/Dinesh.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/index.css" rel="stylesheet" />
+    <title>🚀 DinoProjectHub | Crafting Digital Magic ✨</title>
+
+    <script>
+      const titles = [
+        "🚀 DinoProjectHub",
+        "✨ Crafting Digital Magic",
+        "💻 Code. Create. Inspire.",
+        "🌟 Welcome to Portfolio",
+      ];
+      let index = 0;
+      setInterval(() => {
+        document.title = titles[index];
+        index = (index + 1) % titles.length;
+      }, 2500);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
