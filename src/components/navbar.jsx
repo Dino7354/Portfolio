@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX, FiHome, FiUser, FiBookOpen, FiFolder, FiFileText } from "react-icons/fi";
-import Resume from "../assets/LatestResume.pdf";
+import Resume from "../assets/Dineshresume.pdf";
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(() => {
