@@ -1,11 +1,21 @@
 import React from 'react';
 import {
-  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGithub, FaPython
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGithub,
+  FaPython,
+  FaTerminal,
 } from 'react-icons/fa';
 import {
-  SiMongodb, SiTailwindcss, SiJavascript
+  SiMongodb,
+  SiTailwindcss,
+  SiJavascript,
+  SiCplusplus,
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
+
 
 const skillsData = [
   { name: 'HTML5', icon: <FaHtml5 className="text-[#ff5733]" /> },
@@ -17,7 +27,11 @@ const skillsData = [
   { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-[#38bdf8]" /> },
   { name: 'GitHub', icon: <FaGithub className="text-[#ffffffcc]" /> },
   { name: 'Python', icon: <FaPython className="text-[#ffde57]" /> },
+  { name: 'C', icon: <FaTerminal className="text-blue-600" /> },
+  { name: 'C++', icon: <SiCplusplus className="text-blue-500" /> },
+  { name: 'Termux', icon: <FaTerminal className="text-green-400" /> },
 ];
+
 
 const Skills = () => (
   <section id="skills" className="py-20 px-6 bg-[#fff8e7] dark:bg-[#0a0a0a]">

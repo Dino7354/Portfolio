@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Globe, Shirt, Brain, CloudSun } from "lucide-react";
+import { Globe, Shirt, Brain } from "lucide-react";
+import { FaBaby } from "react-icons/fa";
+import { WiDayCloudy } from "react-icons/wi";
 
 const cardVariants = {
   initial: { opacity: 0, scale: 0.8 },
@@ -95,7 +97,7 @@ const Projects = () => (
         </p>
       </motion.div>
 
-      {/* Real-Time Weather Website Project */}
+      {/* Real-Time Weather App */}
       <motion.div
         className="bg-[#fffaf0] dark:bg-[#1a1a1a] p-6 rounded-xl shadow-lg flex flex-col cursor-pointer"
         initial="initial"
@@ -108,21 +110,19 @@ const Projects = () => (
         }
       >
         <div className="flex items-center space-x-4 mb-4">
-          <CloudSun className="text-[#ff00cc]" size={32} />
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+          <WiDayCloudy className="text-[#ff00cc]" size={32} />
+          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
             Real-Time Weather App
           </h3>
         </div>
-        <p className="text-gray-800 dark:text-gray-300 leading-relaxed text-sm md:text-base">
-          A responsive weather application built with React and Tailwind CSS,
-          providing real-time weather data using the OpenWeatherMap API.
-          Features animated backgrounds based on live weather conditions.
-          <br />
-          <span className="text-blue-600 dark:text-blue-400 underline">
-            Visit: weather-geniusio.netlify.app
-          </span>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+          A responsive weather application built with React and Tailwind CSS. It
+          fetches real-time weather data from the OpenWeatherMap API and
+          dynamically updates the interface with animated backgrounds that
+          reflect live conditions.
         </p>
       </motion.div>
+
       {/* BabyTube - YouTube for Babies */}
       <motion.div
         className="bg-[#fffaf0] dark:bg-[#1a1a1a] p-6 rounded-xl shadow-lg flex flex-col cursor-pointer"
@@ -133,10 +133,13 @@ const Projects = () => (
         variants={cardVariants}
         onClick={() => window.open("https://babytub.netlify.app/", "_blank")}
       >
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-          BabyTube
-        </h3>
-        <p className="text-gray-700 dark:text-gray-300">
+        <div className="flex items-center space-x-4 mb-4">
+          <FaBaby className="text-[#ff00cc]" size={32} />
+          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+            BabyTube
+          </h3>
+        </div>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
           A fun and safe YouTube-like platform specially designed for babies.
           Bright visuals, gentle content, and baby-friendly navigation.
         </p>
