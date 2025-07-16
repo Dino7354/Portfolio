@@ -123,6 +123,24 @@ const Projects = () => (
           </span>
         </p>
       </motion.div>
+      {/* BabyTube - YouTube for Babies */}
+      <motion.div
+        className="bg-[#fffaf0] dark:bg-[#1a1a1a] p-6 rounded-xl shadow-lg flex flex-col cursor-pointer"
+        initial="initial"
+        whileInView="whileInView"
+        whileHover="whileHover"
+        transition={{ ...cardVariants.transition, delay: 0.2 }}
+        variants={cardVariants}
+        onClick={() => window.open("https://babytub.netlify.app/", "_blank")}
+      >
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          BabyTube
+        </h3>
+        <p className="text-gray-700 dark:text-gray-300">
+          A fun and safe YouTube-like platform specially designed for babies.
+          Bright visuals, gentle content, and baby-friendly navigation.
+        </p>
+      </motion.div>
     </div>
   </section>
 );
