@@ -8,37 +8,36 @@ const Loader = ({ setLoading }) => {
   }, [setLoading]);
 
   return (
-    <motion.div
-      className="fixed inset-0 flex items-center justify-center 
-                 bg-[#f8f9fa] dark:bg-[#0a0a0a] 
-                 text-[#0a0a0a] dark:text-white z-50"
+    <div
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center
+                 bg-[#f8f9fa] dark:bg-[#0a0a0a]"
     >
-      <motion.div
-        className="relative w-16 h-16 rounded-full flex items-center justify-center
-                   bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 shadow-lg"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-      >
+      {/* Outer Ring */}
+      <div className="relative w-16 h-16">
         <motion.div
-          className="absolute w-20 h-20 rounded-full border-4 border-t-transparent border-red-400"
-          animate={{ scale: [1, 1.2, 1], opacity: [1, 0.8, 1] }}
-          transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-0 rounded-full border-2 
+                     border-neutral-300 dark:border-neutral-700"
         />
-        <motion.div
-          className="absolute w-12 h-12 rounded-full bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400"
-          animate={{ scale: [1, 0.9, 1] }}
-          transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.div>
 
+        {/* Rotating Stroke */}
+        <motion.div
+          className="absolute inset-0 rounded-full border-2 
+                     border-t-transparent border-black dark:border-white"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }}
+        />
+      </div>
+
+      {/* Loading Text */}
       <motion.p
-        className="absolute bottom-20 text-[#0a0a0a] dark:text-white text-lg font-semibold drop-shadow-lg"
-        animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        className="mt-6 text-sm tracking-[0.3em] uppercase 
+                   text-neutral-700 dark:text-neutral-300"
+        animate={{ opacity: [0.4, 1, 0.4] }}
+        transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
       >
-        Loading...
+        Loading
       </motion.p>
-    </motion.div>
+    </div>
   );
 };
 
