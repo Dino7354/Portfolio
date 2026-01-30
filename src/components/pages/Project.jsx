@@ -57,7 +57,7 @@ const Projects = () => (
     </p>
   </motion.div>
 
-      {/* T-Shirt Customizer AI Project */}
+    {/*  T-Shirt Customizer AI Project
       <motion.div
         className="bg-[#fffaf0] dark:bg-[#1a1a1a] p-6 rounded-xl shadow-lg flex flex-col cursor-pointer"
         initial="initial"
@@ -79,7 +79,7 @@ const Projects = () => (
         </p>
       </motion.div>
 
-      {/* Own AI (Gemini Clone) Project */}
+       Own AI (Gemini Clone) Project 
       <motion.div
         className="bg-[#fffaf0] dark:bg-[#1a1a1a] p-6 rounded-xl shadow-lg flex flex-col cursor-pointer"
         initial="initial"
@@ -99,7 +99,7 @@ const Projects = () => (
           it can answer questions, generate content, and interact naturally.
           Built using Node.js, OpenAI API, and React.
         </p>
-      </motion.div>
+      </motion.div> */}
 
       {/* Real-Time Weather App */}
       <motion.div
