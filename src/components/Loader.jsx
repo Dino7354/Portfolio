@@ -12,30 +12,38 @@ const Loader = ({ setLoading }) => {
       className="fixed inset-0 z-50 flex flex-col items-center justify-center
                  bg-[#f8f9fa] dark:bg-[#0a0a0a]"
     >
-      {/* Outer Ring */}
-      <div className="relative w-16 h-16">
-        <motion.div
-          className="absolute inset-0 rounded-full border-2 
-                     border-neutral-300 dark:border-neutral-700"
-        />
-
-        {/* Rotating Stroke */}
-        <motion.div
-          className="absolute inset-0 rounded-full border-2 
-                     border-t-transparent border-black dark:border-white"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }}
-        />
-      </div>
-
-      {/* Loading Text */}
-      <motion.p
-        className="mt-6 text-sm tracking-[0.3em] uppercase 
-                   text-neutral-700 dark:text-neutral-300"
-        animate={{ opacity: [0.4, 1, 0.4] }}
-        transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+      {/* Brand Name */}
+      <motion.h1
+        className="text-2xl md:text-3xl font-semibold tracking-wide
+                   text-neutral-900 dark:text-neutral-100"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        Loading
+        DinoProjectHub
+      </motion.h1>
+
+      {/* Animated Line */}
+      <motion.div
+        className="mt-3 h-[2px] w-24 bg-neutral-900 dark:bg-neutral-100 rounded-full"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: [0, 1, 0] }}
+        transition={{
+          duration: 1.6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        style={{ transformOrigin: "center" }}
+      />
+
+      {/* Subtle Caption */}
+      <motion.p
+        className="mt-6 text-xs tracking-[0.3em] uppercase
+                   text-neutral-500 dark:text-neutral-400"
+        animate={{ opacity: [0.4, 1, 0.4] }}
+        transition={{ duration: 1.6, repeat: Infinity }}
+      >
+        Loading Experience
       </motion.p>
     </div>
   );
